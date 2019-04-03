@@ -1,0 +1,916 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ebeaeb;
+  border: 5px solid #fff;
+  border-top: none;
+  height: 100%;
+  width: 100vw;
+}
+
+header {
+  background: #fff;
+  height: 50px;
+}
+
+header .header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .header-content .logo {
+  height: 100%;
+}
+
+header .header-content .logo a {
+  text-decoration: none;
+}
+
+header .header-content .logo a h1 {
+  color: #000;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+header .header-content .logo a h1:hover {
+  letter-spacing: 2px;
+}
+
+header .header-content .logo a h1 span {
+  color: red;
+  font-size: 25px;
+}
+
+header .header-content nav {
+  height: 50px;
+}
+
+header .header-content nav ul {
+  height: 50px;
+  list-style-type: none;
+  margin: auto;
+  overflow: hidden;
+}
+
+header .header-content nav ul li {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  header .header-content nav ul li {
+    display: inline-block;
+    height: 50px;
+  }
+  header .header-content nav ul li:hover {
+    background: red;
+  }
+  header .header-content nav ul li:hover a {
+    color: #fff;
+  }
+}
+
+header .header-content nav ul li a {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+header .header-content nav ul a {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 2px;
+  margin-top: 13px;
+}
+
+header .header-content nav ul a:hover {
+  color: red;
+}
+
+section#search {
+  padding: 10px 0;
+}
+
+section#search .search-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 30%;
+      grid-template-columns: 60% 30%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 10px;
+}
+
+@media (min-width: 768px) {
+  section#search .search-content {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+section#search .search-content input.search {
+  position: relative;
+  border-radius: 5px;
+  padding: 3px;
+  border: 0;
+}
+
+section#search .search-content a {
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0 5px;
+  font-size: 15px;
+  display: inline-block;
+  border: 0;
+  background: red;
+  color: #fff;
+}
+
+section#search .search-content a:hover {
+  color: red;
+  background: #FFF;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  section#search .search-content a {
+    padding: 0;
+    width: 60%;
+  }
+}
+
+main {
+  width: 90%;
+  margin: auto;
+  height: 30vh;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  main {
+    height: 60vh;
+  }
+}
+
+main #left {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-text-stroke: 1px #fff;
+  z-index: 1;
+}
+
+main #left:hover {
+  color: #fff;
+}
+
+main #right {
+  cursor: pointer;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-text-stroke: 1px #fff;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1;
+}
+
+main #right:hover {
+  color: #fff;
+}
+
+main .slider-content {
+  height: 30vh;
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  main .slider-content {
+    height: 60vh;
+  }
+}
+
+main .slider-content .animate {
+  -webkit-animation-name: animate;
+          animation-name: animate;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes animate {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animate {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main .slider-content .slide1 {
+  border: 5px solid #fff;
+  height: 43vh;
+  background: url(../img/showcase2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  main .slider-content .slide1 {
+    height: 60vh;
+    background-size: 100% 100%;
+  }
+}
+
+main .slider-content .slide2 {
+  border: 5px solid #fff;
+  height: 30vh;
+  background: url(../img/showcase3.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  main .slider-content .slide2 {
+    height: 60vh;
+    background-size: 100% 100%;
+  }
+}
+
+main .slider-content .slide3 {
+  border: 5px solid #fff;
+  height: 30vh;
+  background: url(../img/showcase4.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  main .slider-content .slide3 {
+    height: 60vh;
+    background-size: cover;
+  }
+}
+
+section#latest {
+  background: #fff;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  section#latest {
+    margin-top: 10px;
+  }
+}
+
+section#latest h1 {
+  border: 5px solid #fff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  font-size: 30px;
+  color: #FFF;
+  background: red;
+}
+
+@media (min-width: 768px) {
+  section#latest .latest-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 23% 23% 23% 23%;
+        grid-template-columns: 23% 23% 23% 23%;
+    grid-column-gap: 20px;
+    margin: auto;
+    overflow: hidden;
+  }
+}
+
+section#latest .latest-content #hide-latest {
+  display: none;
+}
+
+section#latest .latest-content .albums {
+  text-align: center;
+  margin-bottom: 10px;
+  height: 100%;
+  padding-top: 10px;
+}
+
+@media (min-width: 768px) {
+  section#latest .latest-content .albums {
+    padding-top: 30px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+section#latest .latest-content .albums:nth-child(5), section#latest .latest-content .albums:nth-child(6), section#latest .latest-content .albums:nth-child(7), section#latest .latest-content .albums:nth-child(8) {
+  display: none;
+}
+
+section#latest .latest-content .albums img {
+  margin: auto;
+  width: 60%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  section#latest .latest-content .albums img {
+    width: 100%;
+  }
+}
+
+section#latest .latest-content .albums h1 {
+  color: #000;
+  background: 0;
+  font-size: 20px;
+  width: 80%;
+  margin: auto;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  section#latest .latest-content .albums h1 {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+section#latest .latest-content .albums h4 {
+  color: gray;
+}
+
+section#latest .latest-content .albums h4 span.out {
+  color: red;
+}
+
+@media (min-width: 768px) {
+  section#latest .latest-content .albums h4 {
+    font-size: 14px;
+  }
+}
+
+section#latest .latest-content .albums p {
+  font-weight: bold;
+  color: red;
+}
+
+section#latest .latest-content .albums button#addtocart {
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 5px;
+  border-radius: 5px;
+  background: red;
+  color: #fff;
+  margin-top: auto;
+  border: 1px solid #fff;
+}
+
+section#latest .latest-content .albums button#addtocart:hover {
+  color: red;
+  background: #fff;
+  border: red 1px solid;
+}
+
+@media (min-width: 768px) {
+  section#latest .latest-content .albums button#addtocart {
+    width: 90%;
+    padding: 7px 10px;
+  }
+}
+
+section#latest .more {
+  width: 100%;
+  text-align: right;
+  margin: auto;
+}
+
+section#latest .more button.vmore {
+  border: 0;
+  border-bottom: 1px solid #000;
+  font-size: 20px;
+  margin: 50px 30px 0 0;
+  background: transparent;
+}
+
+section#latest .more button.vmore:hover {
+  cursor: pointer;
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+section#sale {
+  background: #fff;
+  border: 5px solid #fff;
+  width: 90%;
+  margin: 20px auto 0 auto;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  section#sale {
+    margin-top: 10px;
+  }
+}
+
+section#sale h1 {
+  color: #fff;
+  background: red;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+section#sale .sale-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  section#sale .sale-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 23% 23% 23% 23%;
+        grid-template-columns: 23% 23% 23% 23%;
+    grid-column-gap: 20px;
+    margin: auto;
+  }
+}
+
+section#sale .sale-content .albums {
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  section#sale .sale-content .albums {
+    padding-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+section#sale .sale-content .albums:nth-child(5), section#sale .sale-content .albums:nth-child(6), section#sale .sale-content .albums:nth-child(7), section#sale .sale-content .albums:nth-child(8), section#sale .sale-content .albums:nth-child(9) {
+  display: none;
+}
+
+section#sale .sale-content .albums h1 {
+  width: 80%;
+  background: 0;
+  color: #000;
+  font-size: 20px;
+  margin: auto;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  section#sale .sale-content .albums h1 {
+    font-size: 16px;
+  }
+}
+
+section#sale .sale-content .albums img {
+  margin: auto;
+  width: 70%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  section#sale .sale-content .albums img {
+    width: 100%;
+  }
+}
+
+section#sale .sale-content .albums h4 {
+  color: gray;
+}
+
+@media (min-width: 768px) {
+  section#sale .sale-content .albums h4 {
+    font-size: 14px;
+  }
+}
+
+section#sale .sale-content .albums p {
+  font-weight: bold;
+  color: red;
+}
+
+section#sale .sale-content .albums p strike {
+  color: #000;
+}
+
+section#sale .sale-content .albums button#addtocart {
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 5px;
+  border-radius: 5px;
+  background: red;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-top: auto;
+}
+
+section#sale .sale-content .albums button#addtocart:hover {
+  color: red;
+  background: #fff;
+  border: red 1px solid;
+}
+
+@media (min-width: 768px) {
+  section#sale .sale-content .albums button#addtocart {
+    width: 90%;
+    padding: 7px 10px;
+  }
+}
+
+section#sale .more {
+  width: 100%;
+  text-align: right;
+  margin: auto;
+}
+
+section#sale .more button.vmore {
+  border: 0;
+  border-bottom: 1px solid #000;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: transparent;
+  margin: 50px 30px 10px 0;
+}
+
+section#sale .more button.vmore:hover {
+  cursor: pointer;
+  color: red;
+  border-bottom: 1px solid red;
+}
+
+section#artist {
+  background: #ebeaeb;
+  width: 90%;
+  margin: 20px auto 0 auto;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  section#artist {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
+
+section#artist h1 {
+  border: 5px solid #fff;
+  color: #fff;
+  background: red;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+section#artist .artist-content {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  section#artist .artist-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+section#artist .artist-content div {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  section#artist .artist-content div {
+    padding: 0;
+  }
+}
+
+section#artist .artist-content div a {
+  display: inline-block;
+}
+
+section#artist .artist-content div a img {
+  width: 100%;
+  height: 250px;
+  border: 5px solid #fff;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+section#artist .artist-content div a img:hover {
+  opacity: 0.5;
+}
+
+section#artist .artist-content div h1 {
+  border: 0;
+  background: 0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin-bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+}
+
+section#artist .artist-content div h1 span {
+  color: red;
+}
+
+section#artist #artist-album {
+  background: #fff;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+section#artist #artist-album h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  font-size: 30px;
+  color: #FFF;
+  background: red;
+}
+
+@media (min-width: 768px) {
+  section#artist #artist-album h1 {
+    margin-bottom: 20px;
+  }
+}
+
+section#artist #artist-album .artist-album-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+
+@media (min-width: 768px) {
+  section#artist #artist-album .artist-album-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 23% 23% 23% 23%;
+        grid-template-columns: 23% 23% 23% 23%;
+    grid-column-gap: 20px;
+    margin: auto;
+  }
+}
+
+section#artist #artist-album .artist-album-content .albums {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  section#artist #artist-album .artist-album-content .albums {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+section#artist #artist-album .artist-album-content .albums h1 {
+  background: 0;
+  width: 80%;
+  color: #000;
+  font-size: 15px;
+  margin: auto;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  section#artist #artist-album .artist-album-content .albums h1 {
+    font-size: 16px;
+  }
+}
+
+section#artist #artist-album .artist-album-content .albums img {
+  width: 60%;
+  margin: auto;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  section#artist #artist-album .artist-album-content .albums img {
+    width: 100%;
+  }
+}
+
+section#artist #artist-album .artist-album-content .albums h4 {
+  color: gray;
+}
+
+@media (min-width: 768px) {
+  section#artist #artist-album .artist-album-content .albums h4 {
+    font-size: 14px;
+  }
+}
+
+section#artist #artist-album .artist-album-content .albums p {
+  font-weight: bold;
+  color: red;
+}
+
+section#artist #artist-album .artist-album-content .albums p strike {
+  color: #000;
+}
+
+section#artist #artist-album .artist-album-content .albums button#addtocart {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  padding: 5px 5px;
+  border-radius: 5px;
+  background: red;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+section#artist #artist-album .artist-album-content .albums button#addtocart:hover {
+  color: red;
+  background: #fff;
+  border: red 1px solid;
+}
+
+@media (min-width: 768px) {
+  section#artist #artist-album .artist-album-content .albums button#addtocart {
+    width: 90%;
+    padding: 7px 10px;
+  }
+}
+
+footer {
+  margin-top: 20px;
+  background: #fff;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    margin-top: 10px;
+  }
+}
+
+footer .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  footer .footer-content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: left;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+}
+
+footer .footer-content h1 {
+  font-size: 20px;
+  margin-top: 10px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+footer .footer-content p {
+  font-size: 13px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+footer .footer-content a {
+  text-decoration: none;
+  padding: 5px 0;
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

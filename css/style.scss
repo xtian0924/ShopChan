@@ -1,0 +1,703 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    
+}
+
+@mixin desktop {
+    @media (min-width: 768px){
+        @content;
+    }
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+button{
+    cursor: pointer;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #ebeaeb;
+    border: 5px solid #fff;
+    border-top: none;
+    height: 100%;
+    width: 100vw;
+}
+
+header{
+    background: #fff;
+    height: 50px;
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            height: 100%;
+            a{
+                text-decoration: none;
+                h1{
+                    color: #000;
+                    transition: all .5s ease-in-out;
+                    &:hover{
+                        letter-spacing: 2px;
+                    }
+                    span{
+                        color: red;
+                        font-size: 25px;
+                    }
+                }
+            }
+        
+        }
+        nav{
+            height: 50px;
+            ul{
+                height: 50px;
+                list-style-type: none;
+                margin: auto;
+                overflow: hidden;
+                li{
+                    display: none;
+                    
+                    @include desktop{
+                        display: inline-block;
+                        height: 50px;
+
+                        &:hover{
+                            background: red;
+                        }
+                        &:hover a{
+                            color: #fff;
+                        }
+                    }
+                    a{
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        color: #000;
+                        text-decoration: none;
+                        display: inline-block;
+                        padding: 0 10px;
+                        margin-top: 10px;
+                  
+                    }
+                }
+                a{
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    color: #000;
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 0 2px;
+                    margin-top: 13px;
+                    @include desktop{
+                    }
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }  
+    }
+}
+
+section#search{
+    padding: 10px 0;
+    .search-content{
+        
+        display: grid;
+        grid-template-columns: 60% 30%;
+        justify-content: center;
+        grid-gap: 10px;
+        @include desktop{
+            width: 50%;
+            margin: auto;
+        }
+        input.search{
+            position: relative;
+            border-radius:5px;
+            padding: 3px;
+            border: 0;
+            
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            padding: 0 5px;
+            font-size: 15px;
+            display: inline-block;
+            border: 0;
+            background: red;
+            color: #fff;    
+            &:hover{
+                color: red;
+                background: #FFF;
+                cursor: pointer;
+           }
+
+           @include desktop{
+               padding: 0;
+               width: 60%;
+           }
+        }
+    }
+}
+
+main{ 
+    width: 90%;
+    margin: auto;
+    height: 30vh;
+    position: relative;
+    margin-bottom: 10px;
+    @include desktop{
+        height: 60vh;
+    }
+    
+    #left{
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        color:rgba(255, 255, 255, 0.5);
+         -webkit-text-stroke: 1px #fff;
+        z-index: 1;
+        &:hover{
+            color: #fff;
+
+        }
+    }
+    #right{
+        cursor: pointer;
+        position: absolute;
+        color:rgba(255, 255, 255, 0.5);
+         -webkit-text-stroke: 1px #fff;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        z-index: 1;
+        &:hover{
+            color: #fff;
+
+        }
+    }
+    .slider-content{
+        height: 30vh;
+        width: 100%;
+        position: relative;
+        @include desktop{
+            height: 60vh;
+        }
+        .animate {
+            animation-name: animate;
+            animation-duration: 1.5s;
+        }
+                   
+        @keyframes animate {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        .slide1{
+            border: 5px solid #fff;
+            height: 43vh;
+            background: url(../img/showcase2.jpg) ; 
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position:center;
+            @include desktop{
+                height: 60vh;
+                background-size: 100% 100%;
+            }
+       }
+        .slide2{
+            border: 5px solid #fff;
+            height: 30vh;
+           background: url(../img/showcase3.jpg);
+           background-size: 100% 100%;
+           background-repeat: no-repeat;
+           background-position: center;
+           @include desktop{
+            height: 60vh;
+            background-size: 100% 100%;
+        }
+       }
+        .slide3{
+            border: 5px solid #fff;
+            height: 30vh;
+           background: url(../img/showcase4.jpg);
+           background-size: 100% 100%;
+           background-repeat: no-repeat;
+           background-position: center;
+           
+           @include desktop{
+               height: 60vh;
+               background-size: cover;
+           }
+       }
+    }
+}
+
+section#latest{
+    background: #fff;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    padding-bottom: 20px;
+    @include desktop{
+        margin-top: 10px;
+    }
+    h1{
+        border: 5px solid #fff;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px;
+        font-size: 30px;
+        color: #FFF;
+        background: red;
+    }
+    .latest-content{
+        @include desktop{
+            display: grid;
+            grid-template-columns: 23% 23% 23% 23%;
+            grid-column-gap: 20px;
+            margin: auto;
+            overflow: hidden;
+        }
+        #hide-latest{
+            display: none;
+        }
+        .albums{
+            text-align: center;
+            margin-bottom: 10px;
+            height: 100%;
+            padding-top: 10px; 
+            @include desktop{
+                padding-top: 30px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+            }     
+            &:nth-child(5),
+            &:nth-child(6),
+            &:nth-child(7),
+            &:nth-child(8){
+                display: none;
+
+            }    
+           
+            img{
+                margin: auto;
+                width: 60%;
+                height:auto;
+                @include desktop{
+                    width: 100%;
+                }
+            }
+            h1{
+                color: #000;
+                background: 0;
+                font-size: 20px;
+                width: 80%;
+                margin: auto;
+                padding: 0;
+                @include desktop{
+                    font-size: 16px;
+                    width: 100%;
+                }
+            }
+           
+            h4{
+                color: gray;
+                span.out{
+                    color: red;
+                }
+                @include desktop{
+                    font-size: 14px;
+                }
+            }
+            p{
+                font-weight: bold;
+                color: red;  
+            }
+            button#addtocart{
+                width: 35%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 5px 5px;
+                border-radius: 5px;
+                background: red;
+                color: #fff;
+                margin-top: auto;
+                border: 1px solid #fff;
+                &:hover{
+                    color: red;
+                    background: #fff;
+                    border: red 1px solid;
+                }
+                @include desktop{
+                    width: 90%;
+                    padding: 7px 10px;
+                }
+            }
+        }
+    }
+    .more{
+        width: 100%;
+        text-align: right;  
+        margin: auto;
+        
+
+        button.vmore{
+            border: 0; 
+            border-bottom: 1px solid #000;
+            font-size: 20px;
+            margin: 50px 30px 0 0;
+            background: transparent;
+
+            &:hover{
+                cursor: pointer;
+                color: red;
+                border-bottom: 1px solid red;
+            }
+       
+        }
+    }
+}
+
+section#sale{
+    background: #fff;
+    border: 5px solid #fff;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    position: relative;
+    padding-bottom: 20px;
+    @include desktop{
+        margin-top: 10px;
+        
+    }
+    h1{
+        color: #fff;
+        background: red;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+    .sale-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        text-align:center;
+        @include desktop{
+            display: grid;
+            grid-template-columns: 23% 23% 23% 23%;
+            grid-column-gap: 20px;
+            margin: auto;
+        }
+        .albums{
+            padding-top: 20px;
+            @include desktop{
+                padding-top: 30px;
+                display: flex;
+                flex-direction: column;
+            }
+            &:nth-child(5),
+            &:nth-child(6),
+            &:nth-child(7),
+            &:nth-child(8),
+            &:nth-child(9){
+                display: none;
+            }
+            h1{
+                width: 80%;
+                background: 0;
+                color: #000;
+                font-size: 20px;
+                margin: auto;
+                padding: 0;
+                @include desktop{
+                    font-size: 16px;
+                }
+            }
+          
+            img{
+                margin:auto;
+                width: 70%;
+                height: auto;
+                @include desktop{
+                    width: 100%;
+                }
+            }
+            h4{
+                color: gray;
+                @include desktop{
+                    font-size: 14px;
+                }
+            }
+            p{
+                font-weight: bold;
+                color: red;
+                strike{
+                    color: #000;
+                }
+            }
+            button#addtocart{
+                width: 35%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 5px 5px;
+                border-radius: 5px;
+                background: red;
+                color: #fff;
+                border: 1px solid #fff;
+                margin-top: auto;
+                &:hover{
+                    color: red;
+                    background: #fff;
+                    border: red 1px solid;
+                }
+                @include desktop{
+                    width: 90%;
+                    padding: 7px 10px;
+                }
+            }
+        }      
+    }
+    .more{
+        width: 100%;
+        text-align: right;  
+        margin: auto;
+        
+
+        button.vmore{
+            border: 0; 
+            border-bottom: 1px solid #000;
+            font-size: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background: transparent;
+            margin: 50px 30px 10px 0;
+
+            &:hover{
+                cursor: pointer;
+                color: red;
+                border-bottom: 1px solid red;
+            }
+       
+        }
+    }
+}
+
+section#artist{
+    background: #ebeaeb;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    padding-bottom: 20px;
+    @include desktop{
+        width: 100%;
+        padding-bottom: 0;
+    }
+    h1{
+        border: 5px solid #fff;
+        color: #fff;
+        background: red;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px;
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    .artist-content{
+        
+        text-align: center;
+        @include desktop{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 5px;
+            justify-content: center;
+        }
+        div{
+            position: relative;
+            @include desktop{
+                padding: 0;
+            }
+            a{
+                display: inline-block;
+                img{
+                    width: 100%;
+                    height: 250px;
+                    border: 5px solid #fff;
+                    transition: opacity 0.2s ease;
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+            }
+            h1{
+                border: 0;
+                background: 0;
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                margin-bottom: 0;
+                transform: translateX(-50%);
+                display: inline-block;
+                font-size: 20px;
+                color: #fff;
+                span{
+                    color: red;
+                }
+
+
+            }
+        }
+    }
+    #artist-album{
+        background: #fff;
+        width: 90%;
+        margin: auto;
+        position: relative;
+        padding-bottom: 20px;
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            padding: 20px;
+            font-size: 30px;
+            color: #FFF;
+            background: red;
+            @include desktop{
+                margin-bottom: 20px;
+            }
+        }
+        .artist-album-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            text-align:center;
+            padding: 5px;
+            @include desktop{
+                display: grid;
+                grid-template-columns: 23% 23% 23% 23%;
+                grid-column-gap: 20px;
+                margin: auto;
+            }
+        
+            .albums{
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                @include desktop{
+                    display: flex;
+                    flex-direction: column;
+                }
+                h1{
+                    background: 0;
+                    width: 80%;
+                    color: #000;
+                    font-size: 15px;
+                    margin: auto;
+                    padding: 0;
+                    @include desktop{
+                        font-size: 16px;
+                    }
+                }
+                img{
+                    width: 60%;
+                    margin: auto;
+                    height: auto;
+                    @include desktop{
+                        width: 100%;
+                    }
+                }
+                h4{
+                    color: gray;
+                    @include desktop{
+                        font-size: 14px;
+                    }
+                }
+                p{
+                    strike{
+                        color: #000;
+                    }
+                    font-weight: bold;
+                    color: red;
+                }
+                button#addtocart{
+                    width: 40%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: auto;
+                    padding: 5px 5px;
+                    border-radius: 5px;
+                    background: red;
+                    color: #fff;
+                    border: 1px solid #fff;;
+                    &:hover{
+                        color: red;
+                        background: #fff;
+                        border: red 1px solid;
+                    }
+                    @include desktop{
+                        width: 90%;
+                        padding: 7px 10px;
+                    }
+                }
+            }   
+        }  
+    }
+}
+
+footer{
+    margin-top: 20px;
+    background: #fff;
+    padding-bottom: 10px;
+    @include desktop{
+        margin-top: 10px;
+    }
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 90%;
+        margin: auto;
+        @include desktop{
+            justify-content: space-around;
+            text-align: left;
+            flex-direction: row;
+            width: 100%;
+        }
+        h1{
+            font-size: 20px;
+            margin-top: 10px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+        p{
+            font-size: 13px;
+            padding-top: 5px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            padding: 5px 0;
+            display: block;
+        }
+    }
+}
